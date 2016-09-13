@@ -1,0 +1,10 @@
+final: TsuPod_Driver.o TsuPod.o Song.o 
+	g++ -otest  TsuPod_Driver.o TsuPod.o Song.o
+driver: TsuPod_Driver.cpp TsuPod.h Song.h
+	g++ TsuPod_Driver.cpp 
+tsuPod.o: TsuPod.cpp TsuPod.h Song.h  
+	g++ TsuPod.cpp
+song.o: Song.cpp Song.h
+	g++ Song.cpp 
+clean: 
+	rm TsuPod.o TsuPod_Driver.o Song.o test
